@@ -17,17 +17,22 @@ function areAllEqual(arr) {
     for (let i = 1; i < arr.length; i++) {
         if (first !== arr[i]) {
             return false;
+        } else {
+            return true;
         }
-
-        return true;
     }
 }
 console.log(areAllEqual([1, 2, 1, 1]));
 console.log(areAllEqual(['test', 'test', 'test']));
+
 //Problem 3
 function subArray(arr, n) {
-    const newarray = arr.splice(-n);
-    return newarray;
+    const newArray = arr.splice(-n);
+    return newArray;
 }
 console.log(subArray([1, 2, 3, 4, 5], 2));
 console.log(subArray([1, 2, 3], 6));
+
+fetch("https://jsonplaceholder.typicode.com/users/1/albums")
+    .then((response) => response.json())
+    .then((result) => console.log(result));
