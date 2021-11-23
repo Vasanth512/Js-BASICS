@@ -4,12 +4,13 @@ fetch("https://jsonplaceholder.typicode.com/users/1/albums")
     .then((title) => console.log(title));
 //Problem-2
 function findNumbers(array, sum) {
+    let array2 = [];
     for (let i = 0; i < array.length; i++)
         for (let j = i + 1; j < array.length; j++)
             if (array[i] + array[j] == sum) {
-
-                return console.log("[" + array[i] + "," + array[j] + "]");
-
+                array2.push(array[i]);
+                array2.push(array[j]);
+                return console.log(array2);
 
             }
 
